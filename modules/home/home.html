@@ -1,0 +1,38 @@
+<h1>1R Toolkit / Angular Playground</h1>
+<ol class="docs">
+  <li><span>Branching</span>
+  	<ul>
+  		<li>Create a new branch for your module, do not work on master.</li>
+  		<li>When the module is complete, put up a code review to get feedback, then we can push it.</li>
+  	</ul>
+  </li>
+  <li><span>Create Module</span>
+    <ul>
+      <li>Create a folder for your module in the /modules directory. The goal is to keep your module completely self contained.</li>
+      <li>Add a view, stylesheet, and controller to get started (myModuleName.html, myModuleName.css, myModuleName.js)</li>
+      <li>Link your module in the header and footer of index.html</li>
+      <li>In myModuleName.js, add the following: <br>
+       	<code>app.controller('MyModuleNameController', function ($scope) {  
+});</code>
+      </li>
+      <li>Open up router.js and create a new .state() following the other examples. Put the correct path for your module view in the templateUrl key. In the controller, put the name of your controller ie. MyModuleNameController.</li>
+    </ul>
+  </li>
+    <li><span>Adding a completed module to Side Nav</span>
+    <ul>
+      <li>Head over to index.html and find the .side-nav class. Add a list item and anchor tag with the ui-sref attribute. Your target will be the name of your module as defined in the router state. Example: .state('notepad', {}); --> ui-sref="notepad".</li>
+    </ul>
+  </li>
+  <li><span>Working with FireBase.com</span>
+    <ul>
+      <li>Shoot an email to noah@onerockwell.com to get the firebase credentials.</li>
+      <li>You will need to login, and go to the auth tab in the admin. From there add a local domain (wherever you are hosting your toolkit environment). <strong>OR the easy way:</strong> use dev.1r-toolkit.com in your v-host and you will already be authorized.</li>
+      <li>From there, you will have access to the FireBase DB for toolkit. There is currently an angular factory setup for instant use. Inject FireBase into your app.controller and add something like $scope.helloWorld = FireBase.getArray('/yourModuleName'). This will access that DB and JSON set. You can add a JSON doc manually in FireBase and you should be able to see the object when doing console.log($scope.helloWorld).</li>
+    </ul>
+  </li>
+  <li><span>VENDOR DEPENDENCIES</span>
+  	<ul>
+  		<li>Be sure to use Bower to add any dependencies you need. That keeps them neat in the bower_components folder. More details and documentation on Bower <a href="http://bower.io/">here</a>.</li>
+  	</ul>
+  </li>
+</ol>

@@ -1,0 +1,39 @@
+<h1>One time dead drop your data securely</h1>
+<div id="dead-drop">
+	<div class="col-sm-12">
+	    <div class="panel panel-default">
+	        <div class="panel-body">
+	            <textarea name="message" id="message" style="width:100%" rows="11" ng-model="drop"></textarea>
+	        </div>
+	        <br>
+	        <div class="panel-footer">
+	            <button type="button" class="button" ng-click="makeTheDrop()">Make the drop!</button>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<div id="instructions" style="display: none;">
+	<div class="well">
+		Hi,<br>
+		I'm sending you some secure information.
+		<br>
+		Click this url <br>
+		<a href="{{dropUrl}}">{{dropUrl}}</a><br>
+		or if that doesnt work, copy and paste it into your web browsers location bar
+		<span class="code" id="url"></span>
+
+		<br>
+		This will ONLY work once, so be careful with the password, and make sure to copy the data immediately.
+		<br>
+		This is the password
+		<br>
+		<strong><span id="pass">{{dropPass}}</span></strong>
+		<br>
+		After you pick it up, the data will self destruct and this link won't work anymore.
+		<br>
+		This link will only work for 24 hours, so please check shortly.
+		<br>
+		Thanks!
+	</div>
+</div>

@@ -1,0 +1,21 @@
+.notepad, .interviewnotepad{
+    padding: 0 2em;
+}
+
+.notepad .edit, .interviewnotepad .edit {
+    height: 40vh;
+}
+
+.notepad textarea, .interviewnotepad textarea{
+    height: 100%;
+}
+
+.notepad .preview, .interviewnotepad .preview {
+    height: 35vh;
+    margin: 1.5em 0;
+    overflow: scroll;
+}
+
+.tools {
+    margin-top: 2em;
+}
